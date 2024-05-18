@@ -1,11 +1,16 @@
 <script lang="ts">
     import Arch from "$lib/assets/arch.svelte";
 	import HeaderSection from "./HeaderSection.svelte";
+	import ScreenshotsSection from "./ScreenshotsSection.svelte";
 	import WhySection from "./WhySection.svelte";
 </script>
 
 <main>
     <HeaderSection />
+    <div class="arch">
+        <Arch />
+    </div>
+    <ScreenshotsSection />
     <div class="arch">
         <Arch />
     </div>
