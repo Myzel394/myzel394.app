@@ -66,6 +66,7 @@
         {/each}
         <div />
     </div>
+    <div class="space" />
 </section>
 
 <style>
@@ -74,8 +75,9 @@
         flex-direction: column;
         gap: 4em;
 
+        padding: 0 0 2em 0;
         width: 100%;
-        margin-top: -6em;
+        background: rgb(var(--background-color));
     }
 
     h1 {
@@ -83,7 +85,7 @@
         font-family: "Montserrat", Montserrat, "Roboto", Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-weight: 600;
         text-align: center;
-        color: rgb(var(--on-background-primary-color));
+        color: rgb(var(--on-surface-primary-color));
     }
 
     a {

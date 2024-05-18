@@ -27,6 +27,7 @@
             icon="raphael:opensource"
         />
     </dl>
+    <div class="space" />
 </section>
 
 <style>
@@ -36,11 +37,10 @@
         gap: 4em;
 
         width: 100%;
-        padding: 0 2em 8em 2em;
-        background: rgb(var(--background-color));
-        z-index: -1;
+        padding: 0 2em 2em 2em;
         position: relative;
-        margin-top: -6em;
+
+        background: rgb(var(--surface-color));
     }
 
     h1 {
@@ -48,10 +48,11 @@
         font-family: "Montserrat", Montserrat, "Roboto", Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-weight: 600;
         text-align: center;
-        color: rgb(var(--on-background-primary-color));
+        color: rgb(var(--on-surface-primary-color));
     }
 
     dl {
+        background: rgb(var(--surface-color));
         display: flex;
         flex-direction: column;
         gap: 2em;

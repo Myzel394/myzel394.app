@@ -9,7 +9,7 @@
     --background-null-color: 19, 22, 19;
     --background-color: 25, 28, 25;
     --surface-color: 29, 33, 29;
-    --surface-tint-color: 192, 205, 190;
+    --surface-tint-color: 65, 73, 64;
 
     --on-background-null-primary-color: 255, 255, 255;
     --on-background-null-secondary-color: 121, 180, 171;

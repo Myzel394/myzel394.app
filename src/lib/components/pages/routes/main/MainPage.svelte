@@ -8,13 +8,25 @@
 <main>
     <HeaderSection />
     <div class="arch">
-        <Arch />
+        <Arch
+            nextColor="rgb(var(--background-color))"
+            previousColor="rgb(var(--background-null-color))"
+        />
     </div>
     <ScreenshotsSection />
     <div class="arch">
-        <Arch />
+        <Arch
+            previousColor="rgb(var(--background-color))"
+            nextColor="rgb(var(--surface-color))"
+        />
     </div>
     <WhySection />
+    <div class="arch">
+        <Arch
+            previousColor="rgb(var(--surface-color))"
+            nextColor="rgb(var(--background-color))"
+        />
+    </div>
 </main>
 
 <style>
@@ -23,6 +35,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .arch {
+        display: flex;
     }
 
     .arch > :global(svg) {

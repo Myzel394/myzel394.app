@@ -23,7 +23,7 @@ export let text: string;
     gap: 0.6em;
 
     padding: 1.5em;
-    background: rgb(var(--surface-color));
+    background: rgb(var(--surface-tint-color));
     border-radius: 2em;
 }
 
@@ -33,7 +33,7 @@ export let text: string;
     justify-content: center;
     gap: .5em;
 
-    color: rgb(var(--on-surface-primary-color));
+    color: rgb(var(--on-surface-tint-primary-color));
 }
 
 .title > :global(.icon) {
