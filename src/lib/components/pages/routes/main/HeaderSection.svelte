@@ -87,15 +87,18 @@ onMount(updateAppIcon);
         position: relative;
         width: 10em;
         height: 10em;
+
         border-radius: 25%;
         box-shadow: 0 .5em 8em .3em rgba(var(--on-background-null-secondary-color), 0.3);
-        overflow: hidden;
     }
 
     .app-icon :global(.icon) {
         position: absolute;
         width: 100%;
         height: 100%;
+
+        border-radius: 25%;
+        overflow: hidden;
     }
 
     .app-icon :global(.icon-overlay) {
