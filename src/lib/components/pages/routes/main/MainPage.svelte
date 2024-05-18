@@ -7,12 +7,6 @@
 
 <main>
     <HeaderSection />
-    <div class="arch">
-        <Arch
-            nextColor="rgb(var(--background-color))"
-            previousColor="rgb(var(--background-null-color))"
-        />
-    </div>
     <ScreenshotsSection />
     <div class="arch">
         <Arch

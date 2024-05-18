@@ -1,9 +1,11 @@
 <script lang="ts">
 import AppIcon from "$lib/assets/app-icon.svelte";
+	import Arch from "$lib/assets/arch.svelte";
+	import InvertedArch from "$lib/assets/inverted-arch.svelte";
 import {getFullExpression, generateRandomExpression, type RandomExpression} from "$lib/random-expression-generator";
 	import { onMount } from "svelte";
 
-const SIZE = 140;
+const SIZE = 200;
 let expressions: RandomExpression[] = Array.from({ length: SIZE }, generateRandomExpression);
 $: bgText = expressions.map(getFullExpression).join(" ");
 
@@ -44,31 +46,53 @@ onMount(updateAppIcon);
 </script>
 
 <svelte:window on:resize={updateAppIcon} on:scroll={onScroll} />
-<section class="wrapper">
+<div class="wrapper">
     <div class="bg">
         <p>
             {bgText}
         </p>
     </div>
-    <div class="text">
-        <div class="app-icon" id="app-icon" bind:this={_appIcon}>
-            <AppIcon class="icon icon-overlay" />
-            <AppIcon class="icon" style="opacity: {opacity}" />
+    <section>
+        <div class="text">
+            <div class="app-icon" id="app-icon" bind:this={_appIcon}>
+                <AppIcon class="icon icon-overlay" />
+                <AppIcon class="icon" style="opacity: {opacity}" />
+            </div>
+            <h1>NumberHub</h1>
+            <p>
+                The only calculator you'll ever need.
+            </p>
         </div>
-        <h1>NumberHub</h1>
-        <p>
-            The only calculator you'll ever need.
-        </p>
+    </section>
+    <div class="arch">
+        <InvertedArch
+            nextColor="rgb(var(--background-color))"
+            previousColor="rgb(var(--background-null-color))"
+        />
     </div>
-</section>
+</div>
 
 <style>
-    section {
-        width: 100%;
-        padding: 8em 2em;
+    .wrapper {
+        position: relative;
         background: rgb(var(--background-null-color));
         z-index: -1;
-        position: relative;
+        width: 100%;
+    }
+
+    .arch {
+        display: flex;
+        z-index: 10;
+    }
+
+    .arch > :global(svg) {
+        width: 100%;
+        height: 100%;
+    }
+
+    section {
+        width: 100%;
+        padding: 8em 2em 4em 2em;
     }
 
     h1 {
@@ -114,7 +138,6 @@ onMount(updateAppIcon);
         width: 100%;
         height: 100%;
         z-index: -1;
-        overflow: hidden;
     }
 
     .bg::after {
@@ -125,10 +148,9 @@ onMount(updateAppIcon);
         width: 100%;
         height: 100%;
         background: 
-            linear-gradient(to bottom, transparent 50%, rgba(var(--background-null-color), 1) 95%),
             linear-gradient(to top, transparent 80%, rgba(var(--background-null-color), 1)),
-            linear-gradient(to right, transparent 90%, rgba(var(--background-null-color), 1)),
-            linear-gradient(to left, transparent 90%, rgba(var(--background-null-color), 1));
+            linear-gradient(to right, transparent 92%, rgba(var(--background-null-color), 1)),
+            linear-gradient(to left, transparent 92%, rgba(var(--background-null-color), 1));
     }
 
     .bg > p {
@@ -136,6 +158,7 @@ onMount(updateAppIcon);
         color: rgba(var(--on-background-null-secondary-color), 0.5);
         word-break: break-all;
         line-height: 1.7;
-        opacity: 0.3;
+        opacity: 0.25;
+
     }
 </style>

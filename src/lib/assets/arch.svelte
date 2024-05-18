@@ -3,7 +3,7 @@ export let previousColor;
 export let nextColor;
 </script>
 
-<svg width="2166" height="1080" viewBox="0 0 2166 1080" style="background: {nextColor}" xmlns="http://www.w3.org/2000/svg">
+<svg width="2166" height="1080" viewBox="0 0 2166 1080" style="background: {nextColor}; z-index: -2" xmlns="http://www.w3.org/2000/svg">
 <path
     fill-rule="evenodd"
     clip-rule="evenodd"
