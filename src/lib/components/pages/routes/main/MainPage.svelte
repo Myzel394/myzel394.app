@@ -1,5 +1,6 @@
 <script lang="ts">
     import Arch from "$lib/assets/arch.svelte";
+	import DownloadNow from "./DownloadNow.svelte";
 	import HeaderSection from "./HeaderSection.svelte";
 	import ScreenshotsSection from "./ScreenshotsSection.svelte";
 	import WhySection from "./WhySection.svelte";
@@ -21,6 +22,8 @@
             nextColor="rgb(var(--background-color))"
         />
     </div>
+
+    <DownloadNow />
 </main>
 
 <style>
