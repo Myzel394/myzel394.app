@@ -10,22 +10,20 @@
 
     let _carousel: HTMLDivElement;
 
-    let scales: number[] = [];
+    let percentages: number[] = images.map(() => 1);
     const onScroll = () => {
         const imageWidth = _carousel.scrollWidth / (images.length + 2)
         const scrollAmount = _carousel.scrollLeft;
 
-        scales = images.map((_, index) => {
+        percentages = images.map((_, index) => {
             // No idea why `0.3` instead of `0.4` but it works
             const center = (index + 1) * imageWidth - (imageWidth * 0.30)
 
             const distance = Math.abs(center - scrollAmount);
-            console.log(index, center, imageWidth);
 
             const percentage = Math.max(0, Math.min(1, distance / imageWidth));
 
-            // Clamp between 0.8 and 1
-            return 0.8 + 0.2 * (1 - percentage);
+            return 1 - percentage;
         });
     };
 
@@ -51,7 +49,8 @@
                 <img
                     src={image}
                     alt="Screenshot of NumberHub"
-                    style="transform: scale({scales[index]})"
+                    style:transform="scale({0.8 + 0.2 * (percentages[index])})"
+                    style:box-shadow="0 0.8em 1.5em rgba(0, 0, 0, {0.2 * percentages[index]})"
                 />
             </a>
             <dialog id="{getImageID(image)}">
@@ -59,7 +58,6 @@
                     <img
                         src={image}
                         alt="Screenshot of NumberHub"
-                        style="transform: scale({scales[index]})"
                     />
                 </a>
             </dialog>
@@ -75,7 +73,7 @@
         flex-direction: column;
         gap: 4em;
 
-        padding: 0 0 2em 0;
+        padding: 0;
         width: 100%;
         background: rgb(var(--background-color));
     }
@@ -99,6 +97,8 @@
         scroll-snap-type: x mandatory;
 
         background: rgb(var(--background-color));
+
+        padding: 5em 0;
     }
 
     .carousel > a, .carousel > div {
@@ -109,6 +109,8 @@
 
     .carousel img {
         width: 100%;
+
+        border-radius: 2em;
     }
 
     dialog {
