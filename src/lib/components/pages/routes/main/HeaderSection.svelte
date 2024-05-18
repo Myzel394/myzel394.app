@@ -1,25 +1,10 @@
 <script lang="ts">
 import AppIcon from "$lib/assets/app-icon.svelte";
-	import Arch from "$lib/assets/arch.svelte";
-	import InvertedArch from "$lib/assets/inverted-arch.svelte";
-import {getFullExpression, generateRandomExpression, type RandomExpression} from "$lib/random-expression-generator";
-	import { onMount } from "svelte";
+import InvertedArch from "$lib/assets/inverted-arch.svelte";
+import { onMount } from "svelte";
+import DynamicBackgroundExpressions from "./DynamicBackgroundExpressions.svelte";
+	import StaticBackgroundExpressions from "./StaticBackgroundExpressions.svelte";
 
-const SIZE = 200;
-let expressions: RandomExpression[] = Array.from({ length: SIZE }, generateRandomExpression);
-$: bgText = expressions.map(getFullExpression).join(" ");
-
-const update = () => {
-    expressions = Array.from({ length: SIZE }, generateRandomExpression);
-};
-
- let clear: NodeJS.Timeout
- $: {
-	 clearInterval(clear)
-	 clear = setInterval(update, 800);
- }
-
-///// 
 let percentage = 0;
 let _appIcon: HTMLDivElement;
 let appIconY = 0;
@@ -47,11 +32,7 @@ onMount(updateAppIcon);
 
 <svelte:window on:resize={updateAppIcon} on:scroll={onScroll} />
 <div class="wrapper">
-    <div class="bg">
-        <p>
-            {bgText}
-        </p>
-    </div>
+    <StaticBackgroundExpressions />
     <section>
         <div class="text">
             <div class="app-icon" id="app-icon" bind:this={_appIcon}>
@@ -128,37 +109,5 @@ onMount(updateAppIcon);
         justify-content: center;
         row-gap: 2em;
         z-index: 2;
-    }
-
-    .bg {
-        pointer-events: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-    }
-
-    .bg::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: 
-            linear-gradient(to top, transparent 80%, rgba(var(--background-null-color), 1)),
-            linear-gradient(to right, transparent 92%, rgba(var(--background-null-color), 1)),
-            linear-gradient(to left, transparent 92%, rgba(var(--background-null-color), 1));
-    }
-
-    .bg > p {
-        font-size: .75rem;
-        color: rgba(var(--on-background-null-secondary-color), 0.5);
-        word-break: break-all;
-        line-height: 1.7;
-        opacity: 0.25;
-
     }
 </style>
