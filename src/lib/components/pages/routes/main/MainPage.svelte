@@ -5,7 +5,40 @@
 
 <main>
     <HeaderSection />
-    <Arch />
+    <div class="arch">
+        <Arch />
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </main>
 
 <style>
@@ -14,5 +47,10 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .arch > :global(svg) {
+        width: 100%;
+        height: 100%;
     }
 </style>

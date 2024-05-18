@@ -1,6 +1,7 @@
 <script lang="ts">
 import AppIcon from "$lib/assets/app-icon.svelte";
 import {getFullExpression, generateRandomExpression, type RandomExpression} from "$lib/random-expression-generator";
+	import { onMount } from "svelte";
 
 const SIZE = 140;
 let expressions: RandomExpression[] = Array.from({ length: SIZE }, generateRandomExpression);
@@ -15,8 +16,34 @@ const update = () => {
 	 clearInterval(clear)
 	 clear = setInterval(update, 800);
  }
+
+///// 
+let percentage = 0;
+let _appIcon: HTMLDivElement;
+let appIconY = 0;
+let appIconSize = 0;
+
+const updateAppIcon = () => {
+    const { height, y } = _appIcon.getBoundingClientRect();
+    appIconY = y
+    appIconSize = height;
+};
+
+const onScroll = () => {
+    const scrollY = window.scrollY;
+    percentage = Math.min(1, Math.max(0, scrollY / (appIconY + appIconSize)));
+};
+
+function easeInOutQuad(x: number): number {
+return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+}
+
+$: opacity = easeInOutQuad(1 - percentage);
+
+onMount(updateAppIcon);
 </script>
 
+<svelte:window on:resize={updateAppIcon} on:scroll={onScroll} />
 <section class="wrapper">
     <div class="bg">
         <p>
@@ -24,7 +51,10 @@ const update = () => {
         </p>
     </div>
     <div class="text">
-        <AppIcon class="icon" />
+        <div class="app-icon" id="app-icon" bind:this={_appIcon}>
+            <AppIcon class="icon icon-overlay" />
+            <AppIcon class="icon" style="opacity: {opacity}" />
+        </div>
         <h1>NumberHub</h1>
         <p>
             The only calculator you'll ever need.
@@ -48,11 +78,23 @@ const update = () => {
         font-weight: 800;
     }
 
-    .wrapper :global(.icon) {
+    .app-icon {
+        position: relative;
         width: 10em;
         height: 10em;
         border-radius: 25%;
-        box-shadow: 0 .5em 15em .2em rgba(var(--on-background-null-secondary-color), 0.3);
+        box-shadow: 0 .5em 8em .3em rgba(var(--on-background-null-secondary-color), 0.3);
+        overflow: hidden;
+    }
+
+    .app-icon :global(.icon) {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .app-icon :global(.icon-overlay) {
+        mix-blend-mode: overlay;
     }
 
     .text {
@@ -73,7 +115,6 @@ const update = () => {
         height: 100%;
         z-index: -1;
         overflow: hidden;
-        opacity: 0.5;
     }
 
     .bg::after {
@@ -83,13 +124,18 @@ const update = () => {
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(to bottom, transparent, rgba(var(--background-null-color), 1));
+        background: 
+            linear-gradient(to bottom, transparent 50%, rgba(var(--background-null-color), 1) 95%),
+            linear-gradient(to top, transparent 80%, rgba(var(--background-null-color), 1)),
+            linear-gradient(to right, transparent 90%, rgba(var(--background-null-color), 1)),
+            linear-gradient(to left, transparent 90%, rgba(var(--background-null-color), 1));
     }
 
-    .bg p {
+    .bg > p {
         font-size: .75rem;
         color: rgba(var(--on-background-null-secondary-color), 0.5);
         word-break: break-all;
         line-height: 1.7;
+        opacity: 0.3;
     }
 </style>
