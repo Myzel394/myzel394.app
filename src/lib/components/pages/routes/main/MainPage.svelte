@@ -1,6 +1,7 @@
 <script lang="ts">
     import Arch from "$lib/assets/arch.svelte";
 	import HeaderSection from "./HeaderSection.svelte";
+	import WhySection from "./WhySection.svelte";
 </script>
 
 <main>
@@ -8,37 +9,7 @@
     <div class="arch">
         <Arch />
     </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <WhySection />
 </main>
 
 <style>
