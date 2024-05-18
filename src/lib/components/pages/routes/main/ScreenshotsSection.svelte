@@ -101,6 +101,11 @@
         padding: 5em 0;
     }
 
+    .carousel > a {
+        display: flex;
+        justify-content: center;
+    }
+
     .carousel > a, .carousel > div {
         scroll-snap-align: center;
         width: 60%;
@@ -110,6 +115,7 @@
     .carousel img {
         width: 100%;
 
+        object-fit: contain;
         border-radius: 2em;
     }
 
@@ -142,5 +148,23 @@
     }
 
     dialog:not(:target) { display: none; }
+
+    @media (min-width: 600px) {
+        section {
+            padding-top: 5em;
+        }
+
+        .carousel img {
+            width: fit-content;
+            margin: 0 auto;
+            max-height: 40em;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .carousel > a, .carousel > div {
+            width: 30%;
+        }
+    }
 </style>
 

@@ -70,5 +70,16 @@ import ObtainiumBadgeImage from "$lib/assets/obtainium-badge.png";
         max-width: 15em;
         height: auto;
     }
+
+    @media (min-width: 600px) {
+        section {
+            padding-top: 4em;
+        }
+
+        ul {
+            flex-direction: row;
+            gap: 2em;
+        }
+    }
 </style>
 

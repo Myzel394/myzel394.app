@@ -2,8 +2,7 @@
 import AppIcon from "$lib/assets/app-icon.svelte";
 import InvertedArch from "$lib/assets/inverted-arch.svelte";
 import { onMount } from "svelte";
-import DynamicBackgroundExpressions from "./DynamicBackgroundExpressions.svelte";
-	import StaticBackgroundExpressions from "./StaticBackgroundExpressions.svelte";
+import StaticBackgroundExpressions from "./StaticBackgroundExpressions.svelte";
 
 let percentage = 0;
 let _appIcon: HTMLDivElement;
@@ -59,6 +58,7 @@ onMount(updateAppIcon);
         background: rgb(var(--background-null-color));
         z-index: -1;
         width: 100%;
+        overflow: hidden;
     }
 
     .arch {
@@ -112,5 +112,16 @@ onMount(updateAppIcon);
         justify-content: center;
         row-gap: 2em;
         z-index: 2;
+    }
+
+
+    @media (min-width: 600px) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        .arch {
+            display: none;
+        }
     }
 </style>

@@ -57,5 +57,24 @@
         flex-direction: column;
         gap: 2em;
     }
+
+    @media (min-width: 600px) {
+        section {
+            padding-top: 4em;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        dl {
+            max-width: 80em;
+            margin: 0 auto;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1em;
+            justify-content: center;
+            align-items: stretch;
+        }
+    }
 </style>
 

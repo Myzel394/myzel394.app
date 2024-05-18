@@ -1,9 +1,9 @@
 <script lang="ts">
-import { generateRandomExpression, getFullExpression, type RandomExpression } from "$lib/random-expression-generator";
+import { generateRandomExpression, getFullExpression } from "$lib/random-expression-generator";
 
 const AMOUNT = 10;
 
-export let size = 200;
+export let size = 800;
 </script>
 
 <div class="bg">
@@ -36,6 +36,16 @@ export let size = 200;
             linear-gradient(to top, transparent 80%, rgba(var(--background-null-color), 1)),
             linear-gradient(to right, transparent 92%, rgba(var(--background-null-color), 1)),
             linear-gradient(to left, transparent 92%, rgba(var(--background-null-color), 1));
+    }
+
+    @media (min-width: 600px) {
+        .bg::after {
+            background: 
+                linear-gradient(to top, transparent 80%, rgba(var(--background-null-color), 1)),
+                linear-gradient(to right, transparent 92%, rgba(var(--background-null-color), 1)),
+                linear-gradient(to left, transparent 92%, rgba(var(--background-null-color), 1)),
+                linear-gradient(to bottom, transparent 80%, rgba(var(--background-null-color), 1));
+        }
     }
 
     .bg > p {

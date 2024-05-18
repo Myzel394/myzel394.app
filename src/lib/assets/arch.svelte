@@ -11,3 +11,12 @@ export let nextColor;
     fill="{previousColor}"
 />
 </svg>
+
+<style>
+@media (min-width: 600px) {
+    svg {
+        display: none;
+    }
+}
+</style>
+
