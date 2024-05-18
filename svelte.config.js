@@ -1,5 +1,6 @@
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import adapter from '@sveltejs/adapter-static';
+import { svelteSVG } from "rollup-plugin-svelte-svg";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,7 +16,7 @@ const config = {
 			precompress: false,
 			strict: true
 		})
-	}
+	},
 };
 
 export default config;
