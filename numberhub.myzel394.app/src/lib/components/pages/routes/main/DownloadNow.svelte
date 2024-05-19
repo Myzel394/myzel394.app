@@ -9,7 +9,10 @@ import ObtainiumBadgeImage from "$lib/assets/obtainium-badge.png";
 
     <ul>
         <li>
-            <a href="https://play.google.com/store/apps/details?id=app.myzel394.numberhub">
+            <a
+                href="https://play.google.com/store/apps/details?id=app.myzel394.numberhub"
+                rel="noopener"
+            >
                 <img
                     src="{GooglePlayBadgeImage}"
                     alt="Get it on Google Play"
@@ -17,7 +20,10 @@ import ObtainiumBadgeImage from "$lib/assets/obtainium-badge.png";
             </a>
         </li>
         <li>
-            <a href="https://github.com/Myzel394/NumberHub/releases">
+            <a
+                href="https://github.com/Myzel394/NumberHub/releases"
+                rel="noopener"
+            >
                 <img
                     src="{GithubBadgeImage}"
                     alt="Get it on Github"
@@ -25,7 +31,10 @@ import ObtainiumBadgeImage from "$lib/assets/obtainium-badge.png";
             </a>
         </li>
         <li>
-            <a href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Myzel394/NumberHub//">
+            <a
+                href="https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/Myzel394/NumberHub//"
+                rel="noopener"
+            >
                 <img
                     src="{ObtainiumBadgeImage}"
                     alt="Get it with Obtainium"
@@ -76,6 +85,10 @@ import ObtainiumBadgeImage from "$lib/assets/obtainium-badge.png";
     @media (min-width: 600px) {
         section {
             padding-top: 4em;
+        }
+
+        h1 {
+            margin-top: 0;
         }
 
         ul {

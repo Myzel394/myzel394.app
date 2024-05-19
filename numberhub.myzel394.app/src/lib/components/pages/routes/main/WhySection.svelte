@@ -64,6 +64,10 @@
         section {
             padding-top: 4em;
         }
+
+        h1 {
+            margin-top: 0;
+        }
     }
 
     @media (min-width: 1200px) {

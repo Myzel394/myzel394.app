@@ -1,0 +1,123 @@
+{
+  ".svelte-kit/generated/client-optimized/app.js": {
+    "file": "_app/immutable/entry/app.DWNv4ylK.js",
+    "name": "entry/app",
+    "src": ".svelte-kit/generated/client-optimized/app.js",
+    "isEntry": true,
+    "imports": [
+      "_scheduler.BT1L_XGg.js",
+      "_index.DlmjD8Qe.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/generated/client-optimized/nodes/0.js",
+      ".svelte-kit/generated/client-optimized/nodes/1.js",
+      ".svelte-kit/generated/client-optimized/nodes/2.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/0.js": {
+    "file": "_app/immutable/nodes/0.VVigohHT.js",
+    "name": "nodes/0",
+    "src": ".svelte-kit/generated/client-optimized/nodes/0.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.BT1L_XGg.js",
+      "_index.DlmjD8Qe.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/1.js": {
+    "file": "_app/immutable/nodes/1.g4iIzkvC.js",
+    "name": "nodes/1",
+    "src": ".svelte-kit/generated/client-optimized/nodes/1.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.BT1L_XGg.js",
+      "_index.DlmjD8Qe.js",
+      "_entry.Cl29TzA-.js"
+    ]
+  },
+  ".svelte-kit/generated/client-optimized/nodes/2.js": {
+    "file": "_app/immutable/nodes/2.DoFleR5n.js",
+    "name": "nodes/2",
+    "src": ".svelte-kit/generated/client-optimized/nodes/2.js",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_scheduler.BT1L_XGg.js",
+      "_index.DlmjD8Qe.js"
+    ],
+    "css": [
+      "_app/immutable/assets/2.BC1pUAJC.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/google-play-badge.BAXiFmDF.png",
+      "_app/immutable/assets/github-badge.9WUsOU9h.png",
+      "_app/immutable/assets/obtainium-badge.DvSugiRX.png",
+      "_app/immutable/assets/slide1.D6SmDmAx.png",
+      "_app/immutable/assets/slide2.C3NayiWa.png",
+      "_app/immutable/assets/slide3.BJ8zXOXu.png",
+      "_app/immutable/assets/slide4.BBPXQ1yQ.png",
+      "_app/immutable/assets/slide5.0ak1sSXH.png"
+    ]
+  },
+  "_entry.Cl29TzA-.js": {
+    "file": "_app/immutable/chunks/entry.Cl29TzA-.js",
+    "name": "entry",
+    "imports": [
+      "_scheduler.BT1L_XGg.js"
+    ]
+  },
+  "_index.DlmjD8Qe.js": {
+    "file": "_app/immutable/chunks/index.DlmjD8Qe.js",
+    "name": "index",
+    "imports": [
+      "_scheduler.BT1L_XGg.js"
+    ]
+  },
+  "_scheduler.BT1L_XGg.js": {
+    "file": "_app/immutable/chunks/scheduler.BT1L_XGg.js",
+    "name": "scheduler"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/client/entry.js": {
+    "file": "_app/immutable/entry/start.CrrSZW_6.js",
+    "name": "entry/start",
+    "src": "node_modules/@sveltejs/kit/src/runtime/client/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_entry.Cl29TzA-.js"
+    ]
+  },
+  "src/lib/assets/github-badge.png": {
+    "file": "_app/immutable/assets/github-badge.9WUsOU9h.png",
+    "src": "src/lib/assets/github-badge.png"
+  },
+  "src/lib/assets/google-play-badge.png": {
+    "file": "_app/immutable/assets/google-play-badge.BAXiFmDF.png",
+    "src": "src/lib/assets/google-play-badge.png"
+  },
+  "src/lib/assets/obtainium-badge.png": {
+    "file": "_app/immutable/assets/obtainium-badge.DvSugiRX.png",
+    "src": "src/lib/assets/obtainium-badge.png"
+  },
+  "src/lib/assets/screenshots/slide1.png": {
+    "file": "_app/immutable/assets/slide1.D6SmDmAx.png",
+    "src": "src/lib/assets/screenshots/slide1.png"
+  },
+  "src/lib/assets/screenshots/slide2.png": {
+    "file": "_app/immutable/assets/slide2.C3NayiWa.png",
+    "src": "src/lib/assets/screenshots/slide2.png"
+  },
+  "src/lib/assets/screenshots/slide3.png": {
+    "file": "_app/immutable/assets/slide3.BJ8zXOXu.png",
+    "src": "src/lib/assets/screenshots/slide3.png"
+  },
+  "src/lib/assets/screenshots/slide4.png": {
+    "file": "_app/immutable/assets/slide4.BBPXQ1yQ.png",
+    "src": "src/lib/assets/screenshots/slide4.png"
+  },
+  "src/lib/assets/screenshots/slide5.png": {
+    "file": "_app/immutable/assets/slide5.0ak1sSXH.png",
+    "src": "src/lib/assets/screenshots/slide5.png"
+  }
+}

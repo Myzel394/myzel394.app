@@ -54,7 +54,7 @@
                 />
             </a>
             <dialog id="{getImageID(image)}">
-                <a href="#!">
+                <a href="#_">
                     <img
                         src={image}
                         alt="Screenshot of NumberHub"
@@ -154,6 +154,10 @@
     @media (min-width: 600px) {
         section {
             padding-top: 5em;
+        }
+
+        h1 {
+            margin-top: 0;
         }
 
         .carousel img {

@@ -1,1 +1,1 @@
-<meta name="theme-color" content="#b99563">
+<meta name="theme-color" content="#ebaa47">

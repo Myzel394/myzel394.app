@@ -1,20 +1,20 @@
 
         html {
-            --background-null-color: 8, 7, 6;
-            --background-color: 28, 24, 21;
-            --surface-color: 40, 34, 30;
-            --surface-tint-color: 54, 46, 41;
+            --background-null-color: 12, 12, 7;
+            --background-color: 34, 35, 21;
+            --surface-color: 46, 48, 28;
+            --surface-tint-color: 61, 64, 38;
 
-            --on-background-null-primary-color: 198, 176, 150;
-            --on-background-null-secondary-color: 134, 125, 114;
+            --on-background-null-primary-color: 196, 184, 172;
+            --on-background-null-secondary-color: 195, 147, 74;
 
-            --on-background-primary-color: 195, 159, 117;
-            --on-background-secondary-color: 196, 129, 37;
+            --on-background-primary-color: 190, 166, 142;
+            --on-background-secondary-color: 255, 154, 0;
 
-            --on-surface-primary-color: 195, 159, 117;
-            --on-surface-secondary-color: 177, 137, 81;
+            --on-surface-primary-color: 190, 166, 142;
+            --on-surface-secondary-color: 232, 159, 48;
 
-            --on-surface-tint-primary-color: 196, 152, 101;
-            --on-surface-tint-secondary-color: 133, 105, 73;
+            --on-surface-tint-primary-color: 190, 158, 127;
+            --on-surface-tint-secondary-color: 132, 113, 93;
         }
         
