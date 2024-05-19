@@ -52,6 +52,8 @@ import ObtainiumBadgeImage from "$lib/assets/obtainium-badge.png";
         font-weight: 600;
         text-align: center;
         color: rgb(var(--on-surface-primary-color));
+
+        margin-top: -3em;
     }
 
     ul {

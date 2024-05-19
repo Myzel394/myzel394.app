@@ -53,6 +53,7 @@ h4 {
 dd {
     font-size: 1rem;
     line-height: 1.4;
+    color: rgb(var(--on-surface-tint-secondary-color));
 }
 
 @media (min-width: 1200px) {

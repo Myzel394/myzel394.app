@@ -49,6 +49,8 @@
         font-weight: 600;
         text-align: center;
         color: rgb(var(--on-surface-primary-color));
+
+        margin-top: -3em;
     }
 
     dl {

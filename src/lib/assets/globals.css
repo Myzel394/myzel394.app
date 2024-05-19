@@ -1,0 +1,20 @@
+
+        html {
+            --background-null-color: 8, 7, 6;
+            --background-color: 28, 24, 21;
+            --surface-color: 40, 34, 30;
+            --surface-tint-color: 54, 46, 41;
+
+            --on-background-null-primary-color: 198, 176, 150;
+            --on-background-null-secondary-color: 134, 125, 114;
+
+            --on-background-primary-color: 195, 159, 117;
+            --on-background-secondary-color: 196, 129, 37;
+
+            --on-surface-primary-color: 195, 159, 117;
+            --on-surface-secondary-color: 177, 137, 81;
+
+            --on-surface-tint-primary-color: 196, 152, 101;
+            --on-surface-tint-secondary-color: 133, 105, 73;
+        }
+        

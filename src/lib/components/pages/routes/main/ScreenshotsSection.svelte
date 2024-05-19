@@ -71,7 +71,7 @@
     section {
         display: flex;
         flex-direction: column;
-        gap: 4em;
+        gap: 2em;
 
         padding: 0;
         width: 100%;
@@ -83,7 +83,9 @@
         font-family: "Montserrat", Montserrat, "Roboto", Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-weight: 600;
         text-align: center;
-        color: rgb(var(--on-surface-primary-color));
+        color: rgb(var(--on-background-primary-color));
+
+        margin-top: -3em;
     }
 
     a {

@@ -39,7 +39,7 @@ onMount(updateAppIcon);
                 <AppIcon class="icon" style="opacity: {opacity}" />
             </div>
             <h1>NumberHub</h1>
-            <p>
+            <p class="description">
                 The only calculator you'll ever need.
             </p>
         </div>
@@ -81,6 +81,7 @@ onMount(updateAppIcon);
         font-size: 10cqw;
         font-family: "Montserrat", Montserrat, "Roboto", Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
         font-weight: 800;
+        color: rgb(var(--on-background-null-primary-color));
     }
 
     .app-icon {
@@ -114,6 +115,9 @@ onMount(updateAppIcon);
         z-index: 2;
     }
 
+    .description {
+        color: rgb(var(--on-background-null-secondary-color));
+    }
 
     @media (min-width: 600px) {
         h1 {
