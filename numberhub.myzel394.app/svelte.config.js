@@ -1,6 +1,5 @@
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import adapter from '@sveltejs/adapter-static';
-import { svelteSVG } from "rollup-plugin-svelte-svg";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -15,7 +14,16 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		})
+		}),
+        prerender: {
+            handleMissingId: ({ id }) => {
+                if (["_"].includes(id)) {
+                    return;
+                }
+
+                throw `Missing ID: ${id}`
+            },
+        },
 	},
 };
 
