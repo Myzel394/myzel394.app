@@ -4,8 +4,11 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev --host",
+        "download-wallpaper": "node ./download_wallpaper.js",
+        "set-theme": "node ./set_theme_from_wallpaper.js",
 		"build": "vite build",
-		"build:full": "node ./download_wallpaper.js && node ./set_theme_from_wallpaper.js && vite build",
+        "build:full-no-wallpaper": "npm run set-theme && npm run build",
+		"build:full": "npm run download-wallpaper && npm run set-theme && npm run build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
